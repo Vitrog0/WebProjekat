@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 900px
+}
+.placeholder {
+    background-color: #f0f0f0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex: 1;
+    margin: 10px
+}
+.footer {
+    font-size: 14px;
+    color: #888;
+    text-align: left;
+    margin-top: 20px;
+}
