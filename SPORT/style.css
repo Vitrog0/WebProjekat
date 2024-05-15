@@ -4,6 +4,7 @@
 
 body, html {
     overflow-x: hidden; /*Sprjecava skrolanje u stranu*/
+    scroll-behavior: smooth; 
 }
 /*Prvi screen*/
 body {
@@ -41,18 +42,12 @@ body {
 
 .sport {
     height: 20%;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.sport > h1 {
-    font-size: 100pt;
-    color: white;
-    font-family: "Kanit", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
 
 .fudbal {
     height: 20%;
@@ -61,30 +56,12 @@ body {
     text-align: center;
 }
 
-.fudbal > h1 {
-    font-size: 70pt;
-    color: white;
-    font-family: "Kanit", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.kosarka > h1 {
-    font-size: 70pt;
-    color: white;
-    font-family: "Kanit", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
 .kosarka {
     height: 20%;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-
-
 
 .rukomet {
     height: 20%;
@@ -101,7 +78,7 @@ body {
 }
 
 .sport > h1 {
-    font-size: 120pt;
+    font-size: 800%;
     color: white;
     font-family: "Kanit", sans-serif;
     font-weight: 600;
@@ -111,7 +88,7 @@ body {
 .kosarka > a,
 .rukomet > a,
 .ragbi > a {
-    font-size: 70pt;
+    font-size: 50pt;
     color: white;
     font-family: "Kanit", sans-serif;
     font-weight: 600;
@@ -146,7 +123,7 @@ body {
 }
 
 .slike > p {
-    font-size: 32pt;
+    font-size: 230%;
     color: white;
     font-family: "Kanit", sans-serif;
     font-weight: 600;
@@ -179,11 +156,24 @@ body {
     background-position: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
+.divKosarka {
+    height: 90%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
+.divKosarka  > p {
+    font-size: 150%;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
 
 .rukomet > a {
     text-decoration: none;
@@ -192,7 +182,30 @@ body {
 
 .rukomet-section {
     height: 100vh;
-    background-color: lightblue;
+    background-image: url(slike/159215464_200847091626395_2324983177324000402_n.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.divRukomet {
+    display: flex;
+    height: 90%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.divRukomet   > p {
+    font-size: 150%;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
 }
 
 .ragbi > a {
@@ -202,5 +215,32 @@ body {
 
 .ragbi-section {
     height: 100vh;
-    background-color: lightblue;
+    background-image: url(slike/ragbi.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.divRagbi {
+    height: 80%;
+    width: 35%;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-left: 40px;
+}
+
+.divRagbi   > p {
+    font-size: 150%;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
 }
