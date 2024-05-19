@@ -30,12 +30,13 @@ body {
     right: 0;
     bottom: 0;
     background-image: url(slike/zenica\ main.webp);
+    background-size: 100% 100%;
     filter: blur(1px);
     z-index: -1; 
 }
 
 .main > h1 {
-    font-size: 100pt;
+    font-size: 70pt;
     color: white;
     position: relative;
     z-index: 1; 
@@ -223,3 +224,79 @@ body {
 .subcard4:hover {
     filter: grayscale(0%); /* Uklanjamo crnobijeli efekt na hoveru */
 }
+
+.card3 {
+    display: flex;
+    height: 33%;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.blog {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    background-image: url(slike/Grad-Zenica-iz-zraka-1.jpg);
+    background-size: cover; /* Slika će se razvući kako bi ispunila cijeli prostor */
+    background-position: center; /* Centriranje slike */
+    filter: grayscale(100%); /* Dodajemo crnobijeli efekt */
+}
+
+
+.blog::before {
+    content: "Blog";
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    font-size: 70pt; /* Promijenjeni stilovi fonta */
+    color: white;
+    text-shadow: 4px 4px black;
+    z-index: 1; 
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    opacity: 0; /* Tekst će biti nevidljiv dok se ne pređe mišem */
+    transition: opacity 0.3s ease; /* Animacija pojave teksta */
+}
+
+.blog:hover::before {
+    opacity: 1; /* Tekst postaje vidljiv na hover */
+}
+
+.blog:hover {
+    filter: grayscale(0%); /* Uklanjamo crnobijeli efekt na hoveru */
+}
+
+.footer {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(51, 51, 51) ;
+}
+.f-h {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    border-bottom: 5px solid white;
+}
+.flex-footer {
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    height: 70px;
+    align-items: center;
+    
+}
+.foot-card {
+    color: white;
+}
+.flex-footer img {
+    height: 50px;
+    width: 50px;
+}
+
