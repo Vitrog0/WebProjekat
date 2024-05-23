@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BLOG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+  <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header></header>
+      <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Dashboard</span>
+      </a>
+      <a href="register">
+        <i class="fas fa-link"></i>
+        <span>Sign Up</span>
+      </a>
+      <a href="/logout">
+        <i class="fas fa-stream"></i>
+        <span>Sign Out</span>
+      </a>
+      <a href="onama">
+        <i class="far fa-question-circle"></i>
+        <span>About</span>
+      </a>
+      <a href="kontakt">
+        <i class="far fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+    <div class="main-content">
+        <div class="main-card"><img src="images/blog/Grb-2.png"></div>
+        <div class="main-card">PODJELITE SVOJE ISKUSTVO</div>
+        <a href="unos"><div class="img-card"><img  src="images/blog/pen.svg"></div></a>
+    </div>
+    <div class="grid">
+        <!--<div class="g-card g-text"><p>"Prošlog ljeta sam posjetio Zenicu i bio sam oduševljen toplinom lokalnih stanovnika i ljepotom grada. Smetovi su me impresionirali svojim predivnim pejzažima, a šetnja kroz centar Zenice otkrila je spoj historije i modernog života.
+
+          Posebno mi se svidjelo Bosansko narodno pozorište Zenica i predstava koju sam tamo gledao. Uživao sam u tradicionalnim bosanskim jelima poput ćevapa i bureka u lokalnim restoranima.
+          
+          Zenica je grad pun života i kulture, i jedva čekam priliku da se ponovo vratim"</p></div>
+        <div class="g-card g-lol">
+            <h2>MARKO PETROVIĆ</h2>
+            <p>30. april 2024.</p>
+        </div>
+        <div class="g-card g-text"><p>"This spring, I spent a day in Zenica and was warmly welcomed by the friendly locals and vibrant atmosphere. Kamberovića Park and the Bosna River provided beautiful and serene spots for a relaxing stroll.
+
+          In the charming old town, I explored historic buildings and quaint streets, discovering local artisan shops and cozy cafes. Lunch at a traditional Bosnian restaurant was a highlight, with delicious dishes like begova čorba and tufahija.
+          
+          My visit ended at the Zenica
+          
+          City Museum, where I learned about the city's rich history and culture.
+          
+          Zenica offers a perfect blend of natural beauty, cultural richness, and warm hospitality. I look forward to returning and exploring more of this wonderful city."</p></div>
+        <div class="g-card g-lol">
+            <h2>
+              Sarah Thompson
+            </h2>
+            <p>May 15, 2024
+
+            </p>
+        </div>-->
+        <% posts.forEach(function(post) { %>
+        <div class="g-card g-text"><p><%= post.content %></p></div>
+        <div class="g-card g-lol">
+            <h2>
+              <%= post.title %>
+            </h2>
+            <p>
+              <%= post.username %>
+            </p>
+            <p>
+              <%= new Date(post.created_at).toLocaleString() %>
+            </p>
+            <% if (locals.role === 'admin') { %>
+              <form action="/delete-post/<%= post.id %>" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+            <% } %>
+        </div>
+        <% }); %>
+    </div>
+    <div class="footer">
+      <h2 class="f-h">.</h2>
+      <div class="flex-footer">
+          <a href="git"><div class="foot-card"><img src="images/blog/github.svg"></div></a>
+          <a href="insta"><div class="foot-card"><img src="images/blog/instagram.svg"></div></a>
+          <a href="face"><div class="foot-card"><img src="images/blog/facebook.svg"></div><a>
+      </div>
+  </div>
+</body>
+</html>
